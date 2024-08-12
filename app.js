@@ -162,3 +162,76 @@ console.log(name); // Output: New York
 console.log(age);
 console.log(city);
 console.log(hobbies);
+
+// sprad Opreator
+let arr = ["html","Css","javascript"]
+
+let newArr = ["Graphic","Solidity",...arr,"python"]
+
+console.log(newArr);
+
+function addNum(x,y,z,a){
+  console.log(x+y+z+a);
+  
+}
+let num = [2,3,4,6]
+addNum(...num)
+
+function addNum2(...x){
+  let y = 0
+  for (let i = 0; i < x.length; i++) {
+    y += x[i];
+    
+  }
+  return y;
+  
+}
+
+let val = addNum2(2,3,4,8,4,8,9,2,99)
+console.log(val);
+
+
+function* generator(e) {  
+  yield e + 10;  
+  yield e + 25;  
+}
+  var generate = generator(5);
+console.log(generate.next().value);
+console.log(generate.next().value);
+console.log(generate.next().done);
+
+let arr3 = [1,2,3,4,5]
+let doubleNumberTaridational = []
+
+for (let i = 0; i < arr3.length; i++) {
+  doubleNumberTaridational.push(arr3[i] * 2)
+  
+}
+console.log(arr3);
+
+console.log(doubleNumberTaridational);
+
+let arr03 = ["a","b","c","d"]
+let doubleNumberTaridational3 = []
+
+for (let i = 0; i < arr03.length; i++) {
+  doubleNumberTaridational3.push(arr03[i].toUpperCase())
+  
+}
+console.log(arr03);
+
+console.log(doubleNumberTaridational3);
+
+let mapC = arr3.map(function(num){
+  return num * 10
+})
+console.log(mapC);
+
+const users = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Jane' },
+  { id: 3, name: 'Doe' }
+];
+const userIds = users.map(user => user.name);
+// userIds: [1, 2, 3]
+console.log(userIds);
